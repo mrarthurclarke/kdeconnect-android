@@ -6,6 +6,8 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ProcessLifecycleOwner;
 import androidx.multidex.MultiDexApplication;
 
+import com.google.android.material.color.DynamicColors;
+
 public class MyApplication extends MultiDexApplication {
     private static class LifecycleObserver implements DefaultLifecycleObserver {
         private boolean inForeground = false;
@@ -30,6 +32,9 @@ public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // Material3 Monet
+        DynamicColors.applyToActivitiesIfAvailable(this);
 
         ProcessLifecycleOwner.get().getLifecycle().addObserver(foregroundTracker);
     }

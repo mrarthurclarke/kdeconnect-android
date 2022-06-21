@@ -22,6 +22,7 @@ import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.TwoStatePreference;
 import androidx.preference.ListPreference;
 
+import com.google.android.material.elevation.SurfaceColors;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.apache.commons.io.IOUtils;
@@ -51,6 +52,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         Context context = getPreferenceManager().getContext();
         PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(context);
+
+        // TODO: preference alert dialogs don't use the material alert dialogs yet
+        // see https://github.com/material-components/material-components-android/issues/2732
 
         // Rename device
         renameDevice = new EditTextPreference(context);
