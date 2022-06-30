@@ -22,7 +22,6 @@ import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.TwoStatePreference;
 import androidx.preference.ListPreference;
 
-import com.google.android.material.elevation.SurfaceColors;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.apache.commons.io.IOUtils;
